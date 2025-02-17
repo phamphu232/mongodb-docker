@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mongodb:
+    image: mongodb/mongodb-community-server:7.0.16-ubuntu2204
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGODB_INITDB_ROOT_USERNAME: root
+      MONGODB_INITDB_ROOT_PASSWORD: root
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      # - ./db:/data/db
+      # - ./configdb:/data/configdb

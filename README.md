@@ -11,3 +11,6 @@ cp docker-compose.yml.example docker-compose.yml
 docker-compose up -d
 ## OR
 docker compose up -d
+
+docker cp mongodb:/data/configdb configdb
+docker cp mongodb:/data/db db
